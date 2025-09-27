@@ -13,13 +13,13 @@ terraform {
   backend "s3" {
     bucket         = "my-terraform-state-bucket"
     key            = "eks/terraform.tfstate"
-    region         = "us-east-1"
+    region         = "ap-south-1"
     dynamodb_table = "terraform-locks"
   }
 }
 
 provider "aws" {
-  region = "us-east-1"
+  region = "ap-south-1"
 }
 
 # Kubernetes provider - configured after EKS cluster creation
